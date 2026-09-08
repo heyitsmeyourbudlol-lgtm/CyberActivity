@@ -1,0 +1,21 @@
+# Integration proof — Doc2Api Mac mirror (OSS registry target)
+
+- **When:** 2026-09-05T01:40Z
+- **Role:** integration_architect (peer-7)
+- **Registry SoT (this worktree):** `repos/registry.json` Doc2Api `status=adapt-verified-dgx`
+- **Hub/DGX SoT:** `/home/arnavrastogi/Doc2Api` — prior proof `notes/INTEGRATION_PROOF_DOC2API.md` (`make test`/`make verify` 9/9)
+- **Target path (Mac):** `/Users/togi/Doc2Api` (`mac_path` pinned this cycle)
+- **Prior gap:** MATTERNTHREAD Mac proof named Doc2Api as same-class sibling (NO_GIT / root NO_KIT); no Mac product proof note in peer-7
+- **Live probes this cycle:**
+  - `test ! -e /Users/togi/Doc2Api/.git` — **CONFIRMED_NO_GIT**
+  - `test ! -e /Users/togi/Doc2Api/automation.config.json` — **CONFIRMED_NO_KIT** (root)
+  - Nested kit only: `/Users/togi/Doc2Api/backend/automation.config.json` exists (`peer-coding` namespace — not a root Mac kit install)
+  - Product native verify in `/Users/togi/Doc2Api/backend`:
+    - `.venv/bin/python -m unittest tests.test_billing_checkout tests.test_billing_webhook tests.test_deps_auth -q`
+    - **Ran 26 tests** in 0.014s — **OK** — **EXIT 0**
+  - `python3 scripts/automation_adapt.py --audit --target /Users/togi/Doc2Api` — **BLOCK** (missing root `automation.config.json`; discover `tests` ImportError)
+  - `--audit --target /Users/togi/Doc2Api/backend` — nested kit present but product-gate incomplete (system python: no pytest/ruff/mypy; discover/pen-test FAIL); `tests.test_automation` OK — **do not** treat as Mac root adapt-verified
+- **Adapt / worktree:** **BLOCK** — no root `.git` → `peer_worktree` N/A until git import; no root kit → no `--install` under `self_sufficient`
+- **factory_meter_mode:** `self_sufficient` — do **not** claim `adapt-verified-mac` or `external-proof-adapted`; defer Mac git import + root kit install to `notes/CREATIVE_BACKLOG.md`; **do not** Active-enqueue
+- **Sibling Mac gap remaining (same class):** falcon-ai `/Users/togi/falcon-ai` husk (`mlx_env` only)
+- **Falsifier passed:** Mac product unittest EXIT 0; registry status remains `adapt-verified-dgx`; no Active queue line added; no `adapt-verified-mac` claim

@@ -1,0 +1,11 @@
+{
+  "needle": "OVERSEER_COMMAND_ECOSYSTEM_PLAN_2026_09_07",
+  "ts": "2026-09-08T03:17:56Z",
+  "pre_dispatch_hits": 55,
+  "post_cycle_hits": 4,
+  "raw_python_scripts_hits": 8,
+  "peer_command_hits": 1,
+  "peer_vs_raw_ratio": 0.111,
+  "status": "improve",
+  "hint": "Agents should call ./scripts/peer pre-dispatch before spawn and post-cycle after land; prefer peer verbs over raw python3 scripts/."
+}

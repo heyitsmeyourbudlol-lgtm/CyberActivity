@@ -1,0 +1,6 @@
+{"niche_id":"N08","input":{"status":"adapt_stale medium forever","log":"heal ran adapt; drift= WORK_QUEUE open count != self_improve_context Remaining"},"output":"queue_drift"}
+{"niche_id":"N08","input":{"status":"stall_reason=noop_backoff","log":"Active open=4 kit items; last_cycle noop=true; idle theater"},"output":"noop_stall"}
+{"niche_id":"N08","input":{"status":"Cycle lean-green=no-HOLD verify=ok","log":"last_cycle verify_ok=true noop=false; Active kit flowing"},"output":"healthy"}
+{"niche_id":"N08","input":{"status":"bottleneck id=adapt_stale","log":"should_re_adapt() true after scripts change; queue files identical"},"output":"adapt_stale"}
+{"niche_id":"N08","input":{"status":"improve not 24/7","log":"LaunchAgent STOPPED wrong namespace; need improve-install force"},"output":"oversight_down"}
+{"niche_id":"N08","input":{"status":"plan-gate BLOCKED + adapt_stale + queue drift","log":"classic chicken-egg: verify fail stamped plan-gate; heal must sync-queue then adapt"},"output":"chicken_egg"}
