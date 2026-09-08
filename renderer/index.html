@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; script-src 'self'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberActivity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="drag-region"></div>
+        <p class="eyebrow">Watch</p>
+        <nav id="actor-nav" class="actor-nav"></nav>
+        <div class="sources">
+          <p class="eyebrow">Sources</p>
+          <div id="source-toggles"></div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h1>CyberActivity</h1>
+            <p class="tagline">
+              State-sponsored cyber · adversarial AI · digital sovereignty
+            </p>
+          </div>
+          <button id="refresh-btn" class="refresh-btn" type="button">Refresh</button>
+        </header>
+
+        <section class="summary-hero" id="summary-hero">
+          <div class="summary-meta">
+            <h2>AI briefing</h2>
+            <div class="summary-meta-right">
+              <span id="summary-model" class="mono"></span>
+              <span id="refreshed-at" class="mono"></span>
+            </div>
+          </div>
+          <p id="summary-text" class="summary-text">Pulling the landscape…</p>
+        </section>
+
+        <section class="posters-section">
+          <div class="section-head">
+            <h2>Article posters</h2>
+            <span class="mono">Click a poster for a high-level summary</span>
+          </div>
+          <p id="error-line" class="error-line hidden"></p>
+          <div id="poster-grid" class="poster-grid"></div>
+        </section>
+
+        <section class="actor-board-section">
+          <h2>Actor board</h2>
+          <div id="actor-board" class="actor-board"></div>
+        </section>
+      </main>
+    </div>
+
+    <div id="article-modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-top">
+          <div class="modal-brand">
+            <span id="modal-brand-chip" class="brand-chip">CA</span>
+            <div>
+              <p id="modal-source" class="mono"></p>
+              <p id="modal-date" class="mono muted"></p>
+            </div>
+          </div>
+          <button type="button" class="modal-close" data-close-modal aria-label="Close">✕</button>
+        </div>
+        <h2 id="modal-title"></h2>
+        <div id="modal-tags" class="tags"></div>
+        <p class="modal-label mono">High-level summary</p>
+        <p id="modal-summary" class="modal-summary">Generating…</p>
+        <p id="modal-model" class="mono muted"></p>
+        <div class="modal-clarify">
+          <p class="modal-label mono">Clarify with cyber model</p>
+          <div class="clarify-row">
+            <input
+              id="modal-clarify-input"
+              type="text"
+              maxlength="400"
+              placeholder="e.g. How does this fit known APT TTPs?"
+              autocomplete="off"
+            />
+            <button type="button" id="modal-clarify-ask" class="refresh-btn">Ask</button>
+          </div>
+          <p id="modal-clarify-answer" class="modal-clarify-answer muted"></p>
+          <p id="modal-clarify-model" class="mono muted"></p>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="modal-open" class="refresh-btn">Open original →</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
