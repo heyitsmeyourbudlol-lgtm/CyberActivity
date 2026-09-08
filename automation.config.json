@@ -1,0 +1,44 @@
+{
+  "project_name": "CyberActivity",
+  "project_slug": "cyberactivity",
+  "config_namespace": "cyberactivity",
+  "launch_agent_label": "com.togi.automation-hub-peer-loop",
+  "task_profile": "automation",
+  "test_command": [
+    "python3",
+    "-m",
+    "unittest",
+    "tests.test_automation",
+    "-q"
+  ],
+  "module_scope": {
+    "_mark_flaw_research_landed": "scripts/_mark_flaw_research_landed.py",
+    "_ov_atomic_state_lock_land": "scripts/_ov_atomic_state_lock_land.py",
+    "_ov_land_state_lock": "scripts/_ov_land_state_lock.py",
+    "_ov_patch_agent_exit_soft": "scripts/_ov_patch_agent_exit_soft.py",
+    "_ov_stag_finish": "scripts/_ov_stag_finish.py",
+    "_ov_stag_finish_gates": "scripts/_ov_stag_finish_gates.py",
+    "_ov_stag_fix_land": "scripts/_ov_stag_fix_land.py",
+    "_overseer_heal_sync_pool": "scripts/_overseer_heal_sync_pool.py",
+    "_overseer_land_dirty_theater": "scripts/_overseer_land_dirty_theater.py",
+    "_overseer_land_shadow_purge": "scripts/_overseer_land_shadow_purge.py",
+    "_overseer_land_stagnation": "scripts/_overseer_land_stagnation.py",
+    "_overseer_stag2_land": "scripts/_overseer_stag2_land.py",
+    "_overseer_stag3_land": "scripts/_overseer_stag3_land.py",
+    "_overseer_stag_land_20260904": "scripts/_overseer_stag_land_20260904.py",
+    "_pin_dgx_dynamic": "scripts/_pin_dgx_dynamic.py",
+    "asi_rubric": "scripts/asi_rubric.py",
+    "automation_actions": "scripts/automation_actions.py",
+    "automation_adapt": "scripts/automation_adapt.py",
+    "_clean_switch_free_auth": "scripts/_clean_switch_free_auth.py",
+    "_clean_install_gpu_worker": "scripts/_clean_install_gpu_worker.py",
+    "_clean_force_free_auth": "scripts/_clean_force_free_auth.py",
+    "_infra_fix_once": "scripts/_infra_fix_once.py",
+    "_clean_install_result_watch": "scripts/_clean_install_result_watch.py",
+    "_clean_install_progress_watch": "scripts/_clean_install_progress_watch.py",
+    "_infra_requeue_teacher": "scripts/_infra_requeue_teacher.py"
+  },
+  "verify_commands": [
+    "python3 scripts/peer_orchestrate.py --self-check --quick"
+  ]
+}
