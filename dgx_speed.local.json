@@ -1,0 +1,200 @@
+{
+  "agent_remote": {
+    "enabled": false
+  },
+  "automation_cache_dir": "/dev/shm/automation-cache/state",
+  "max_parallel_peers": 8,
+  "parallel_peer_floor": 8,
+  "max_parallel_agent_procs": 8,
+  "improve_enqueue_cap": 8,
+  "continuous_wake_sec": 30,
+  "continuous_agent_min_interval_sec": 15,
+  "improve_min_cycle_sec": 12,
+  "improve_continuous_wake_sec": 15,
+  "improve_continuous_min_cycle_sec": 10,
+  "improve_wake_sec": 15,
+  "improve_idle_wake_sec": 30,
+  "comms_improve_wake_sec": 20,
+  "comms_improve_continuous_wake_sec": 30,
+  "comms_improve_min_cycle_sec": 12,
+  "local_only_verify_cooldown_sec": 30,
+  "test_cache_ttl_sec": 300,
+  "drift_sync_skip_ttl_sec": 90,
+  "ram_max_used_gb": 110,
+  "stall_pivot_agent_cooldown_sec": 25,
+  "self_heal_interval_sec": 15,
+  "dirty_wait_sec": 2,
+  "compression": {
+    "python_no_bytecode": true,
+    "malloc_arena_max": 2,
+    "node_max_old_space_mb": 768
+  },
+  "factory_fanout": {
+    "enabled": false,
+    "parallel": 8,
+    "interval_sec": 180,
+    "status_filter": [
+      "unaudited",
+      "needs-kit-install",
+      "git",
+      "active-loop-running"
+    ]
+  },
+  "factory_grid": {
+    "enabled": false,
+    "automation_only": true,
+    "hub_agents": 8,
+    "external_agents": 0,
+    "global_agents": 96,
+    "interval_sec": 12,
+    "external_repos": []
+  },
+  "dgx_unittest_cap": 2,
+  "quick_test_command": [
+    "python3",
+    "-m",
+    "unittest",
+    "tests.test_automation",
+    "tests.test_run_peer_tasks",
+    "tests.test_oversight_stagnation_fixes",
+    "-q"
+  ],
+  "ram_accel": {
+    "enabled": false,
+    "cache_root": "/dev/shm/automation-cache",
+    "verify_parallel": 2,
+    "verify_interval_sec": 120,
+    "warm_repos_on_start": true,
+    "hydrate_on_start": true,
+    "mirror_repos": true,
+    "warm_python_venvs": false,
+    "mirror_names": [
+      "Automation"
+    ],
+    "cache_dirs": [
+      "pip",
+      "npm",
+      "ccache",
+      "pytest",
+      "uv",
+      "pnpm-store",
+      "turbo",
+      "next",
+      "venvs",
+      "state"
+    ],
+    "ram_fill": {
+      "enabled": false,
+      "target_reserve_gb": 22,
+      "max_passes": 3,
+      "mirror_worktrees": false,
+      "pip_prefetch_packages": [
+        "pytest",
+        "requests",
+        "pyyaml",
+        "jsonschema",
+        "aiohttp",
+        "httpx",
+        "pydantic",
+        "rich",
+        "click"
+      ],
+      "ballast_enabled": false,
+      "maintain_interval_sec": 600
+    }
+  },
+  "knowledge_index": {
+    "enabled": true,
+    "data_root": "/data/knowledge-index",
+    "hot_cache_root": "/dev/shm/automation-cache/knowledge",
+    "max_storage_gb": 2048,
+    "index_interval_sec": 30,
+    "retrieve_top_k": 8,
+    "retrieve_candidate_k": 64,
+    "max_inject_chars": 6000,
+    "inject_on_quick": true,
+    "hybrid_sparse_weight": 0.55,
+    "mamba_model": "state-spaces/mamba-130m-hf",
+    "mamba_max_ram_mb": 1024,
+    "mamba_dtype": "float16",
+    "mamba_device": "cpu",
+    "mamba_max_length": 128,
+    "mamba_batch_size": 16,
+    "mamba_idle_unload_sec": 300,
+    "library_corpus_paths": [
+      "/data/knowledge-corpus",
+      "/home/arnavrastogi/knowledge-corpus"
+    ],
+    "extra_index_roots": [
+      "/home/arnavrastogi/Automation",
+      "/home/arnavrastogi/CPT",
+      "/home/arnavrastogi/CaaS",
+      "/home/arnavrastogi/ram",
+      "/home/arnavrastogi/Doc2Api"
+    ],
+    "mamba_resident": false
+  },
+  "hub_worker_pool": 96,
+  "continuous_wake_shallow_floor_sec": 30,
+  "dgx_self_check_cap": 1,
+  "ram_efficiency": {
+    "stable_mode": true,
+    "target_used_ram_pct": 0.7,
+    "max_productive_shm_gb": 32,
+    "target_productive_shm_gb": 24,
+    "agent_reserve_gb": 20,
+    "trim_ballast_when_agents_above": 120,
+    "trim_ballast_below_avail_gb": 8
+  },
+  "dgx_utilization": {
+    "interval_sec": 60,
+    "target_agent_fill": 96,
+    "worktree_pool": 96,
+    "unittest_cap": 2,
+    "noop_poke": true,
+    "ram_fill": false,
+    "target_used_ram_pct": 0.82
+  },
+  "dgx_compute": {
+    "enabled": true,
+    "gpu_embed_interval_sec": 0.12,
+    "preload_mamba": true,
+    "gpu_embed_batch": 224,
+    "gpu_sustain_when_idle": false,
+    "embed_burst_sec": 32
+  },
+  "gpu_events": {
+    "synthetic_sustain_enabled": false,
+    "cursor_agent": false,
+    "target_util_pct": 80,
+    "boost_util_pct": 80
+  },
+  "_service_cool_profile": "OVERSEER_SERVICE_MAX_PACE_WASTE_TRIM_2026_09_05",
+  "continuous_wake_shallow_max_items": 8,
+  "dgx_host": {
+    "dgx_max_cursor_agents": 96
+  },
+  "ram_events": {
+    "agent_cap_hold": 96,
+    "agent_cap_trim": 72,
+    "agent_cap_pressure": 36,
+    "agent_cap_emergency": 8,
+    "cursor_agent": false
+  },
+  "ram_hard_max_used_gb": 115,
+  "ram_per_agent_gb": 1.1,
+  "ram_pressure_agent_cap": 48,
+  "ram_emergency_agent_cap": 16,
+  "ram_priority": {
+    "enabled": true,
+    "target_used_gb": 100,
+    "hold_band_gb": 3,
+    "fill_chunk_gb": 2.0,
+    "min_fill_avail_gb": 12,
+    "min_fill_swap_free_gb": 2.5
+  },
+  "factory_sprint": {
+    "enabled": false
+  },
+  "_infra_priority_peer20": "2026-09-06T00:53:04"
+}

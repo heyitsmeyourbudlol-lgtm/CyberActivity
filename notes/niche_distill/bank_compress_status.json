@@ -1,0 +1,213 @@
+{
+  "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+  "ts": "2026-09-07T12:05:07Z",
+  "n_total": 20,
+  "n_ok": 20,
+  "raw_bytes": 467410812,
+  "packed_bytes": 58432396,
+  "rows": [
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n03/weights/n03_land_proof_needle_match_neural.pt",
+      "raw_bytes": 23150600,
+      "packed_bytes": 2894125,
+      "S_approx": 7.999170733814193,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n03/weights/n03_land_proof_needle_match_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n01/weights/n01_queue_bullet_parse_neural.pt",
+      "raw_bytes": 27486704,
+      "packed_bytes": 3436179,
+      "S_approx": 7.999206094909491,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n01/weights/n01_queue_bullet_parse_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n02/weights/n02_queue_kit_vs_research_neural.pt",
+      "raw_bytes": 23152656,
+      "packed_bytes": 2894382,
+      "S_approx": 7.999170807446978,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n02/weights/n02_queue_kit_vs_research_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n04/weights/n04_active_empty_seed_pick_neural.pt",
+      "raw_bytes": 23154712,
+      "packed_bytes": 2894639,
+      "S_approx": 7.999170881066689,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n04/weights/n04_active_empty_seed_pick_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n05/weights/n05_done_gate_checklist_neural.pt",
+      "raw_bytes": 23151628,
+      "packed_bytes": 2894254,
+      "S_approx": 7.9991693887267665,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n05/weights/n05_done_gate_checklist_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n07/weights/n07_hallucination_block_fill_neural.pt",
+      "raw_bytes": 23154712,
+      "packed_bytes": 2894639,
+      "S_approx": 7.999170881066689,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n07/weights/n07_hallucination_block_fill_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n06/weights/n06_plan_gate_self_check_neural.pt",
+      "raw_bytes": 23154712,
+      "packed_bytes": 2894639,
+      "S_approx": 7.999170881066689,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n06/weights/n06_plan_gate_self_check_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n08/weights/n08_stall_class_label_neural.pt",
+      "raw_bytes": 23157796,
+      "packed_bytes": 2895025,
+      "S_approx": 7.999169609934284,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n08/weights/n08_stall_class_label_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n09/weights/n09_verify_fail_triage_neural.pt",
+      "raw_bytes": 23154712,
+      "packed_bytes": 2894639,
+      "S_approx": 7.999170881066689,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n09/weights/n09_verify_fail_triage_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n10/weights/n10_peer_log_skip_reason_neural.pt",
+      "raw_bytes": 23154712,
+      "packed_bytes": 2894639,
+      "S_approx": 7.999170881066689,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n10/weights/n10_peer_log_skip_reason_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n100/weights/n100_niche_bank_expand_propose_neural.pt",
+      "raw_bytes": 23154712,
+      "packed_bytes": 2894639,
+      "S_approx": 7.999170881066689,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n100/weights/n100_niche_bank_expand_propose_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n101/weights/n101_bank_train_status_read_neural.pt",
+      "raw_bytes": 23151628,
+      "packed_bytes": 2894254,
+      "S_approx": 7.9991693887267665,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n101/weights/n101_bank_train_status_read_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n102/weights/n102_niche_serve_route_neural.pt",
+      "raw_bytes": 23154712,
+      "packed_bytes": 2894639,
+      "S_approx": 7.999170881066689,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n102/weights/n102_niche_serve_route_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n103/weights/n103_sidequest_lock_recall_neural.pt",
+      "raw_bytes": 23154712,
+      "packed_bytes": 2894639,
+      "S_approx": 7.999170881066689,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n103/weights/n103_sidequest_lock_recall_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n104/weights/n104_neural_vs_rule_pick_neural.pt",
+      "raw_bytes": 23151628,
+      "packed_bytes": 2894254,
+      "S_approx": 7.9991693887267665,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n104/weights/n104_neural_vs_rule_pick_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n105/weights/n105_param_grain_check_neural.pt",
+      "raw_bytes": 23151628,
+      "packed_bytes": 2894254,
+      "S_approx": 7.9991693887267665,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n105/weights/n105_param_grain_check_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n11/weights/n11_launchagent_loaded_nopid_neural.pt",
+      "raw_bytes": 23157796,
+      "packed_bytes": 2895025,
+      "S_approx": 7.999169609934284,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n11/weights/n11_launchagent_loaded_nopid_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n13/weights/n13_claim_row_extract_neural.pt",
+      "raw_bytes": 23154712,
+      "packed_bytes": 2894639,
+      "S_approx": 7.999170881066689,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n13/weights/n13_claim_row_extract_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n12/weights/n12_worktree_path_safe_neural.pt",
+      "raw_bytes": 23151628,
+      "packed_bytes": 2894254,
+      "S_approx": 7.9991693887267665,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n12/weights/n12_worktree_path_safe_neural.nvfp4.pt"
+    },
+    {
+      "needle": "OVERSEER_NICHE_BANK_COMPRESS_2026_09_07",
+      "source": "notes/niche_distill/practice_n14/weights/n14_verdict_pass_fail_unknown_neural.pt",
+      "raw_bytes": 23154712,
+      "packed_bytes": 2894639,
+      "S_approx": 7.999170881066689,
+      "hot_dtype": "NVFP4_pack_demo",
+      "note": "Cold pack for residency; serve still uses float .pt until TE path",
+      "out": "notes/niche_distill/practice_n14/weights/n14_verdict_pass_fail_unknown_neural.nvfp4.pt"
+    }
+  ],
+  "local_only": true,
+  "note": "Cold pack for residency; serve still uses float .pt until TE path",
+  "S_bank": 7.9991724453674635
+}

@@ -1,0 +1,411 @@
+{
+  "agent_remote": {
+    "enabled": false
+  },
+  "automation_cache_dir": "/dev/shm/automation-cache/state",
+  "max_parallel_peers": 0,
+  "parallel_peer_floor": 96,
+  "hub_worker_pool": 0,
+  "staff_all_niches": true,
+  "pool_rotation": {
+    "enabled": true
+  },
+  "max_parallel_agent_procs": 0,
+  "improve_enqueue_cap": 96,
+  "continuous_wake_sec": 30,
+  "continuous_wake_shallow_floor_sec": 30,
+  "continuous_wake_shallow_max_items": 8,
+  "continuous_agent_min_interval_sec": 15,
+  "improve_min_cycle_sec": 12,
+  "improve_continuous_wake_sec": 15,
+  "improve_continuous_min_cycle_sec": 10,
+  "improve_wake_sec": 15,
+  "improve_idle_wake_sec": 30,
+  "comms_improve_wake_sec": 20,
+  "comms_improve_continuous_wake_sec": 30,
+  "comms_improve_min_cycle_sec": 12,
+  "local_only_verify_cooldown_sec": 30,
+  "test_cache_ttl_sec": 300,
+  "drift_sync_skip_ttl_sec": 90,
+  "ram_max_used_gb": 110,
+  "ram_hard_max_used_gb": 115,
+  "ram_min_avail_gb": 18,
+  "ram_critical_avail_gb": 6,
+  "ram_daemon_reserve_gb": 35,
+  "ram_per_agent_gb": 1.1,
+  "ram_pressure_agent_cap": 48,
+  "ram_emergency_agent_cap": 16,
+  "ram_dispatch_slack_gb": 3,
+  "stall_pivot_agent_cooldown_sec": 25,
+  "stall_pivot_noop_backoff_sec": 30,
+  "self_heal_interval_sec": 15,
+  "autonomous_repair": {
+    "enabled": true,
+    "dispatch_on_verify_fail": true,
+    "dedupe_queue_on_fail": true,
+    "clear_test_cache_on_fail": true,
+    "heal_git_identity": true,
+    "cooldown_sec": 45,
+    "git_user_name": "Automation Hub",
+    "git_user_email": "env:AUTOMATION_GIT_EMAIL"
+  },
+  "dirty_wait_sec": 2,
+  "compression": {
+    "python_no_bytecode": true,
+    "malloc_arena_max": 1,
+    "node_max_old_space_mb": 512
+  },
+  "ram_efficiency": {
+    "enabled": true,
+    "stable_mode": true,
+    "page_warm_enabled": false,
+    "oom_min_avail_gb": 6,
+    "fill_headroom_gb": 18,
+    "agent_reserve_gb": 20,
+    "target_productive_shm_gb": 24,
+    "max_productive_shm_gb": 32,
+    "target_used_ram_pct": 0.7,
+    "trim_ballast_below_avail_gb": 8,
+    "trim_ballast_when_agents_above": 120
+  },
+  "ram_priority": {
+    "enabled": true,
+    "target_used_gb": 100,
+    "hold_band_gb": 3,
+    "fill_chunk_gb": 0.5,
+    "max_worktree_shm_dirs": 48,
+    "keep_mirrors": [
+      "Automation",
+      "Automation Hub",
+      "CPT",
+      "CaaS",
+      "ram",
+      "Doc2Api"
+    ],
+    "min_fill_avail_gb": 8.0,
+    "min_fill_swap_free_gb": 0.5
+  },
+  "ram_events": {
+    "enabled": true,
+    "target_gb": 100,
+    "trim_gb": 100,
+    "pressure_gb": 110,
+    "emergency_gb": 120,
+    "agent_cap_hold": 96,
+    "agent_cap_trim": 72,
+    "agent_cap_pressure": 36,
+    "agent_cap_emergency": 8,
+    "cursor_agent": false,
+    "cursor_agent_cooldown_sec": 300
+  },
+  "dgx_utilization": {
+    "enabled": true,
+    "interval_sec": 60,
+    "target_used_ram_pct": 0.82,
+    "max_productive_shm_gb": 32,
+    "target_agent_fill": 96,
+    "unittest_cap": 2,
+    "self_check_cap": 2,
+    "hub_dispatch": true,
+    "worktree_pool": 96,
+    "role_pool_expand": true,
+    "noop_poke": true,
+    "ram_fill": false
+  },
+  "parallel_agent_dispatch": false,
+  "parallel_worktree_dir": ".worktrees",
+  "factory_fanout": {
+    "enabled": false,
+    "parallel": 8,
+    "interval_sec": 180,
+    "status_filter": [
+      "unaudited",
+      "needs-kit-install",
+      "git",
+      "active-loop-running"
+    ]
+  },
+  "factory_grid": {
+    "enabled": false,
+    "automation_only": false,
+    "hub_agents": 96,
+    "external_agents": 8,
+    "global_agents": 96,
+    "interval_sec": 12,
+    "external_repos": [
+      {
+        "name": "CPT",
+        "path": "/home/arnavrastogi/CPT",
+        "agents": 4
+      },
+      {
+        "name": "CaaS",
+        "path": "/home/arnavrastogi/CaaS",
+        "agents": 4
+      },
+      {
+        "name": "ram",
+        "path": "/home/arnavrastogi/ram",
+        "agents": 2
+      },
+      {
+        "name": "Doc2Api",
+        "path": "/home/arnavrastogi/Doc2Api",
+        "agents": 4
+      },
+      {
+        "name": "falcon-ai",
+        "path": "/home/arnavrastogi/falcon-ai",
+        "agents": 2
+      },
+      {
+        "name": "MATTERNTHREAD",
+        "path": "/home/arnavrastogi/MATTERNTHREAD",
+        "agents": 2
+      }
+    ]
+  },
+  "dgx_compute": {
+    "enabled": true,
+    "gpu_embed_batch": 256,
+    "gpu_embed_interval_sec": 0.08,
+    "gpu_sustain_when_idle": false,
+    "preload_mamba": true,
+    "embed_burst_sec": 90,
+    "gpu_sustain_sec": 3,
+    "gpu_sustain_dim": 6144,
+    "cuda_reclaim_enabled": false,
+    "cuda_memory_fraction_max": 0.22,
+    "cuda_keep_reserved_mb": 20480,
+    "prefer_teachers_when_student_below": 50000
+  },
+  "gpu_events": {
+    "enabled": true,
+    "synthetic_sustain_enabled": false,
+    "target_util_pct": 80,
+    "boost_util_pct": 80,
+    "pressure_util_pct": 60,
+    "emergency_util_pct": 40,
+    "target_slack_pct": 5,
+    "boost_sustain_sec": 8,
+    "boost_sustain_dim": 7168,
+    "pressure_sustain_sec": 14,
+    "pressure_sustain_dim": 8192,
+    "emergency_sustain_sec": 22,
+    "emergency_sustain_dim": 8192,
+    "cursor_agent": false,
+    "cursor_agent_cooldown_sec": 300,
+    "restart_cooldown_sec": 3600,
+    "boost_embed_burst_sec": 60
+  },
+  "resource_priority": {
+    "enabled": true,
+    "pause_development_when_beeping": true,
+    "kill_dev_agents_on_beep": false,
+    "resource_fix_cooldown_sec": 86400
+  },
+  "dgx_unittest_cap": 2,
+  "dgx_self_check_cap": 1,
+  "verify_quiet_timeout_sec": 90,
+  "verify_quiet_max_unittest": 2,
+  "verify_trim_unittest_cap": 2,
+  "trim_agents_over_cap": true,
+  "quick_test_command": [
+    "python3",
+    "-m",
+    "unittest",
+    "tests.test_automation",
+    "tests.test_run_peer_tasks",
+    "tests.test_oversight_stagnation_fixes",
+    "tests.test_peer_worktree",
+    "tests.test_mark_local_verify_gate",
+    "-q"
+  ],
+  "verify_commands": [
+    "python3 scripts/peer_orchestrate.py --self-check",
+    "python3 -m unittest tests.test_automation -q",
+    "python3 -m unittest tests.test_run_peer_tasks -q",
+    "python3 -m unittest tests.test_peer_worktree -q",
+    "python3 -m unittest tests.test_peer_pen_test -q",
+    "python3 -m unittest tests.test_peer_remote -q",
+    "python3 -m unittest tests.test_peer_last_cycle_poison -q",
+    "python3 -m unittest tests.test_peer_self_heal -q",
+    "python3 -m unittest tests.test_peer_repo_research -q"
+  ],
+  "ram_accel": {
+    "enabled": false,
+    "cache_root": "/dev/shm/automation-cache",
+    "verify_parallel": 2,
+    "verify_interval_sec": 120,
+    "warm_repos_on_start": false,
+    "hydrate_on_start": true,
+    "mirror_repos": true,
+    "warm_python_venvs": false,
+    "mirror_names": [
+      "Automation",
+      "CPT",
+      "CaaS",
+      "ram",
+      "Doc2Api"
+    ],
+    "cache_dirs": [
+      "pip",
+      "npm",
+      "ccache",
+      "pytest",
+      "uv",
+      "pnpm-store",
+      "turbo",
+      "next",
+      "venvs",
+      "state"
+    ],
+    "ram_fill": {
+      "enabled": true,
+      "page_warm_enabled": false,
+      "target_reserve_gb": 18,
+      "target_productive_shm_gb": 24,
+      "min_pinned_shm_gb": 20,
+      "ballast_enabled": true,
+      "ballast_chunk_mb": 1024,
+      "maintain_interval_sec": 90,
+      "max_passes": 0,
+      "mirror_worktrees": true,
+      "mirror_all_repos": true,
+      "pip_prefetch_packages": [
+        "pytest",
+        "requests",
+        "pyyaml",
+        "jsonschema",
+        "aiohttp",
+        "httpx",
+        "pydantic",
+        "rich",
+        "click"
+      ]
+    }
+  },
+  "knowledge_index": {
+    "enabled": true,
+    "data_root": "/home/arnavrastogi/.config/automation/knowledge-index",
+    "hot_cache_root": "/dev/shm/automation-cache/knowledge",
+    "max_storage_gb": 2048,
+    "index_interval_sec": 30,
+    "retrieve_top_k": 8,
+    "retrieve_candidate_k": 64,
+    "max_inject_chars": 6000,
+    "inject_on_quick": true,
+    "hybrid_sparse_weight": 0.55,
+    "mamba_model": "state-spaces/mamba-130m-hf",
+    "mamba_mode": "cascade",
+    "knowledge_mamba_budget_gb": 12,
+    "mamba_backend": "cascade",
+    "mamba_compression": "4bit",
+    "mamba_teacher_model": "state-spaces/mamba-2.8b-hf",
+    "mamba_max_ram_mb": 8192,
+    "mamba_dtype": "float16",
+    "mamba_device": "cuda",
+    "mamba_max_length": 256,
+    "mamba_batch_size": 160,
+    "mamba_idle_unload_sec": 1800,
+    "mamba_resident": true,
+    "ssm_state_pool": {
+      "enabled": false,
+      "max_pool_mb": 4096,
+      "student_slots": 96,
+      "teacher_1_slots": 32,
+      "teacher_2_slots": 16,
+      "pair_encode_teachers": true
+    },
+    "compression_stack": {
+      "enabled": true,
+      "l1_precompute": true,
+      "l2_weight_format": true,
+      "l5_ssm_state": true,
+      "l6_cascade": true,
+      "l7_vector_quant": "int8",
+      "weights": {
+        "student": "4bit",
+        "teacher_1": "4bit",
+        "teacher_2": "4bit"
+      }
+    },
+    "cascade": {
+      "student": "state-spaces/mamba-130m-hf",
+      "teacher_1": "state-spaces/mamba-790m-hf",
+      "teacher_2": "state-spaces/mamba-2.8b-hf",
+      "student_compression": "fp16",
+      "teacher_1_compression": "fp16",
+      "teacher_2_compression": "4bit",
+      "student_top_k": 48,
+      "teacher_1_top_k": 16,
+      "teacher_2_top_k": 8
+    },
+    "library_corpus_paths": [
+      "/data/knowledge-corpus",
+      "/home/arnavrastogi/knowledge-corpus"
+    ],
+    "extra_index_roots": [
+      "/home/arnavrastogi/Automation",
+      "/home/arnavrastogi/CPT",
+      "/home/arnavrastogi/CaaS",
+      "/home/arnavrastogi/ram",
+      "/home/arnavrastogi/Doc2Api"
+    ]
+  },
+  "verify_quiet_max_agents": 2,
+  "auto_commit_after_verify": true,
+  "pool_guaranteed_roles": [
+    "progress_monitor"
+  ],
+  "role_importance_order": [
+    "progress_monitor"
+  ],
+  "oversight": {
+    "enabled": true,
+    "dispatch_agent": true,
+    "role_id": "progress_monitor"
+  },
+  "_service_cool_profile": "OVERSEER_SERVICE_MAX_PACE_WASTE_TRIM_2026_09_05",
+  "project_name": "Automation Hub",
+  "project_slug": "automation-hub",
+  "config_namespace": "automation-hub",
+  "launch_agent_label": "com.togi.automation-hub-peer-loop",
+  "task_profile": "automation",
+  "test_command": [
+    "python3",
+    "-m",
+    "unittest",
+    "tests.test_automation",
+    "-q"
+  ],
+  "module_scope": {
+    "_mark_flaw_research_landed": "scripts/_mark_flaw_research_landed.py",
+    "_ov_atomic_state_lock_land": "scripts/_ov_atomic_state_lock_land.py",
+    "_ov_land_state_lock": "scripts/_ov_land_state_lock.py",
+    "_ov_patch_agent_exit_soft": "scripts/_ov_patch_agent_exit_soft.py",
+    "_ov_stag_finish": "scripts/_ov_stag_finish.py",
+    "_ov_stag_finish_gates": "scripts/_ov_stag_finish_gates.py",
+    "_ov_stag_fix_land": "scripts/_ov_stag_fix_land.py",
+    "_overseer_heal_sync_pool": "scripts/_overseer_heal_sync_pool.py",
+    "_overseer_land_dirty_theater": "scripts/_overseer_land_dirty_theater.py",
+    "_overseer_land_shadow_purge": "scripts/_overseer_land_shadow_purge.py",
+    "_overseer_land_stagnation": "scripts/_overseer_land_stagnation.py",
+    "_overseer_stag2_land": "scripts/_overseer_stag2_land.py",
+    "_overseer_stag3_land": "scripts/_overseer_stag3_land.py",
+    "_overseer_stag_land_20260904": "scripts/_overseer_stag_land_20260904.py",
+    "_pin_dgx_dynamic": "scripts/_pin_dgx_dynamic.py",
+    "asi_rubric": "scripts/asi_rubric.py",
+    "automation_actions": "scripts/automation_actions.py",
+    "automation_adapt": "scripts/automation_adapt.py"
+  },
+  "paths": {},
+  "dgx_host": {
+    "dgx_unittest_cap": 2,
+    "dgx_max_cursor_agents": 96
+  },
+  "factory_sprint": {
+    "enabled": false
+  },
+  "_infra_priority_peer20": "2026-09-06T00:53:04"
+}

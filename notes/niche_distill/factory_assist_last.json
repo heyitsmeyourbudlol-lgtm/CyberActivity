@@ -1,0 +1,145 @@
+{
+  "needle": "OVERSEER_FACTORY_NICHE_RUNTIME_2026_09_07",
+  "input": "- [x] **[command-ecosystem] Phase 0\u20131 coverage + soft tips + Backlog enqueue** \u2014 landed 2026-09-07 `scripts/command_ecosystem.py` \u00b7 `notes/COMMAND_COVERAGE.md` \u00b7 plan-gate/self-check tips \u00b7 `./scripts/peer command-coverage` \u2014 Needle `OVERSEER_COMMAND_ECOSYSTEM_PLAN_2026_09_07`",
+  "routes": [
+    {
+      "id": "N06",
+      "name": "plan_gate_self_check",
+      "score": 10.75,
+      "helps": "plan-gate loops"
+    },
+    {
+      "id": "N72",
+      "name": "land_needle_premature",
+      "score": 5.75,
+      "helps": "false land-proof"
+    },
+    {
+      "id": "N82",
+      "name": "self_check_issue_parse",
+      "score": 5.25,
+      "helps": "peer_orchestrate"
+    }
+  ],
+  "serves": [
+    {
+      "niche_id": "N06",
+      "error": "torch required",
+      "ok": false,
+      "device": "cpu",
+      "device_name": "cpu",
+      "device_pick_reason": "forced_cpu",
+      "latency_ms": 0.16,
+      "balance_adjust": {
+        "delta": -0.05,
+        "gpu_share_before": 0.5,
+        "gpu_share_after": 0.45,
+        "why": [
+          "gpu_slower_than_cpu"
+        ],
+        "escalate_floor": 0.30999999999999994,
+        "top_k_bias": -1,
+        "workers_bias": -1
+      }
+    },
+    {
+      "niche_id": "N82",
+      "error": "torch required",
+      "ok": false,
+      "device": "cpu",
+      "device_name": "cpu",
+      "device_pick_reason": "forced_cpu",
+      "latency_ms": 0.07,
+      "balance_adjust": {
+        "delta": -0.05,
+        "gpu_share_before": 0.5,
+        "gpu_share_after": 0.45,
+        "why": [
+          "gpu_slower_than_cpu"
+        ],
+        "escalate_floor": 0.30999999999999994,
+        "top_k_bias": -1,
+        "workers_bias": -1
+      }
+    },
+    {
+      "niche_id": "N72",
+      "error": "torch required",
+      "ok": false,
+      "device": "cpu",
+      "device_name": "cpu",
+      "device_pick_reason": "forced_cpu",
+      "latency_ms": 0.23,
+      "balance_adjust": {
+        "delta": -0.05,
+        "gpu_share_before": 0.5,
+        "gpu_share_after": 0.45,
+        "why": [
+          "gpu_slower_than_cpu"
+        ],
+        "escalate_floor": 0.30999999999999994,
+        "top_k_bias": -1,
+        "workers_bias": -1
+      }
+    }
+  ],
+  "best": null,
+  "retrieval": [
+    {
+      "score": 2.4,
+      "path": "notes/AUTOMATION.md",
+      "title": "## Commands",
+      "snippet": "## Commands\n\n**Agents:** prefer `./scripts/peer <command>` \u2014 see **`notes/AGENT_COMMANDS.md`** for compound recipes (`bootstrap`, `heal-all`, `pre-dispatch`, `noop-break`, etc.).\n\n```bash\npython3 scripts/peer_orchestrate.py --self-check    # teacher audit \u2014 run after edits\npython3 scripts/automation_adapt.py --heal --write  # adapt to project + repair kit\npython3 scripts/automation_adapt.py --audi"
+    },
+    {
+      "score": 2.182,
+      "path": "notes/AGENT_COMMANDS.md",
+      "title": "## Pivotal one-shots",
+      "snippet": "## Pivotal one-shots\n\n### adapt\n\n- **`adapt`** \u2014 Quick adapt heal (cached verify)\n  - `./scripts/peer adapt`\n- **`adapt-all`** \u2014 Adapt every registry repo\n  - `./scripts/peer adapt-all`\n\n### agent\n\n- **`plan-gate`** \u2014 Plan gate \u2014 all agent-vs-human countermeasures before edit\n  - `./scripts/peer plan-gate`\n- **`done-gate`** \u2014 Done gate \u2014 diagnose + compare before DONE\n  - `./scripts/peer done-gate"
+    },
+    {
+      "score": 1.746,
+      "path": "notes/AUTOMATION.md",
+      "title": "## Files",
+      "snippet": "## Files\n\n| File | Role |\n|------|------|\n| `scripts/project_automation.py` | Queue parsing, parallel metrics, cache, drift normalization |\n| `scripts/automation_adapt.py` | Cross-project adapt/heal \u2014 detect stack, sync drift, install kit |\n| `scripts/bundle_automation_kit.py` | Export `dist/automation-kit-*.tar.gz` |\n| `scripts/cursor_self_improve.py` | Build peer prompt; default saves to file (n"
+    }
+  ],
+  "divert": null,
+  "ship_hook": null,
+  "escalate_to_big_model": true,
+  "escalate_floor": 0.30999999999999994,
+  "parallel_enabled": true,
+  "parallel_workers": 2,
+  "top_k": 3,
+  "gpu_share": 0.45,
+  "device": "cpu",
+  "device_pick_reason": "cpu_default",
+  "balance_adjust": {
+    "delta": -0.05,
+    "gpu_share_before": 0.5,
+    "gpu_share_after": 0.45,
+    "why": [
+      "gpu_slower_than_cpu"
+    ],
+    "escalate_floor": 0.30999999999999994,
+    "top_k_bias": -1,
+    "workers_bias": -1
+  },
+  "dynamics": {
+    "gpu_share": 0.45,
+    "escalate_floor": 0.30999999999999994,
+    "device_mode": "auto",
+    "balance_enabled": true,
+    "device": "cpu",
+    "device_pick_reason": "cpu_default",
+    "log": "factory-dynamics: gpu_share=0.45 escalate=0.31 load=0.85 mode=auto"
+  },
+  "local_only": true,
+  "honesty": "Closed-world niche specialists + hash-token retrieval \u2014 not a general LLM. Factory dynamics = live CPU/GPU serve share + adaptive escalate/top_k \u2014 not continuous training, not TE. Compression cold pack \u2260 TensorRT-LLM TE.",
+  "ts": "2026-09-07T15:40:50Z",
+  "mint_suggestion": {
+    "name": "command_ecosystem_phase_coverage",
+    "hint": "./scripts/peer niche-mint --start --name command_ecosystem_phase_coverage --io 'text \u2192 label' --reason 'route_escalate'",
+    "duplicate_of": null
+  }
+}
