@@ -1,0 +1,11 @@
+{
+  "needle": "OVERSEER_COMMAND_ECOSYSTEM_PLAN_2026_09_07",
+  "ts": "2026-09-08T02:54:51Z",
+  "pre_dispatch_hits": 158,
+  "post_cycle_hits": 0,
+  "raw_python_scripts_hits": 0,
+  "peer_command_hits": 32,
+  "peer_vs_raw_ratio": 1.0,
+  "status": "ok",
+  "hint": "Dispatch/command mix looks healthy in recent log tails."
+}

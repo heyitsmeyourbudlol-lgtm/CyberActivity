@@ -1,0 +1,15 @@
+{
+  "needle": "OVERSEER_COMPRESSION_TRAIN_UNLOCK_2026_09_05",
+  "auto_train_needle": "OVERSEER_COMPRESSION_AUTO_TRAIN_2026_09_05",
+  "ts": "2026-09-08T02:30:52Z",
+  "train_unlocked": true,
+  "reason": "all research gates green; min-RAM NVFP4 train",
+  "north_star": {
+    "logical_params": 1000000000,
+    "unique_target": 10000000,
+    "S": 100,
+    "hot_dtype": "NVFP4",
+    "data_prune": false,
+    "objective": "max efficiency / min resident RAM for unique store"
+  }
+}
