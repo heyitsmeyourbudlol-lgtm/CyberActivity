@@ -1,0 +1,22 @@
+# Integration proof — RAM (OSS registry target)
+
+- **When:** 2026-09-04T17:35Z (original integration_architect peer-5) · **restored:** 2026-09-05T19:30Z (output_researcher wave-38)
+- **Role:** integration_architect (original) · output_researcher (cited-but-MISS restore)
+- **Registry SoT:** `repos/registry.json` RAM `status=adapt-verified-dgx`
+- **Target path (DGX):** `/home/arnavrastogi/ram`
+- **Worktree (original cycle):** `/home/arnavrastogi/ram-peer-integration-p5` branch `peer/integration-p5`
+- **Adapt (original):** `python3 scripts/automation_adapt.py --heal --write --quick --target /home/arnavrastogi/ram` → ok (per registry notes)
+- **Native verify (original cycle, in worktree cwd):**
+  - `python3 scripts/peer_orchestrate.py --self-check` — ISSUES: none
+  - `python3 scripts/safety_check.py --json` — PASS (original claim)
+  - `python3 scripts/generate_ram_page.py --quick` — wrote `docs/index.html`
+- **Re-verify this restore cycle (product cwd `/home/arnavrastogi/ram`):**
+  - `python3 scripts/peer_orchestrate.py --self-check` — ISSUES: none
+  - `python3 scripts/generate_ram_page.py --quick` — wrote `/home/arnavrastogi/ram/docs/index.html` EXIT 0
+  - `python3 scripts/safety_check.py --json` — **BLOCK** (dirty-tree: hard `\bSIGKILL\b` in added .py + yellow `ram_jetsam.py` without `--ack-yellow`) — **not** claimed as fresh PASS; does not overturn original worktree PASS or `adapt-verified-dgx`
+- **Kit-run residual heal (2026-09-08):** CLEAN product cwd — scrubbed `\bSIGKILL\b` from kit-synced `scripts/run_peer_tasks.py` (`killpg(..., 9)`); `safety_check.py` now preserves `yellow_acknowledged` across PASS rewrites; yellow ack for protective `ram_jetsam.py` never-close adds; `safety_check --json` PASS sticky ×3; `./scripts/peer kit-run --repo RAM --run` A→E with B_verify ok + honest D `blocked_receipt` (`no_origin_remote`,`gh_cli_missing`); proof row in `notes/FACTORY_A_TO_Z_PROOF.md`
+- **Kit-run residual origin/gh follow-up (2026-09-08):** CLEAN origin wired to `https://github.com/heyitsmeyourbudlol-lgtm/ram.git`; heal committed on wt `ram-kit-a-to-z-20260908T024633` → `peer/kit-a-to-z-20260908T024633` @ `a00dace` pushed. GitHub refused PR from that branch (**no common history** with `main` — CLEAN factory snapshot lineage). Mac path: branch `peer/kit-a-to-z-20260908T024633-mac` @ `4d5ace6` (same heal on `origin/main` history) → [PR #1](https://github.com/heyitsmeyourbudlol-lgtm/ram/pull/1) **MERGED** `0013bf61` (follow-up `bb67d81` re-bundle cleared CI automation-kit drift). Side note: Mac local `main` (16 ahead) was pushed to `origin/main` @ `64778e3` during lock contention before the mac heal branch. CLEAN still `gh_cli_missing` — PR via Mac only. **NO PAY.**
+- **Kit-run residual reaffirm / preferred tenth (2026-09-08):** CLEAN wt `ram-kit-a-to-z-20260908T035404` · branch `peer/kit-a-to-z-20260908T035404` @ `65501a0` · Linux-safe `test_command` (`discover`→`tests.test_automation`) · B=self-check ISSUES:none · safety_check PASS · generate_ram_page --quick · Mac `gh` [PR #2](https://github.com/heyitsmeyourbudlol-lgtm/ram/pull/2) · receipt `notes/KIT_A_TO_Z_RAM_REAFFIRM_TENTH.md` · Needle `OVERSEER_KIT_RUN_AE_2026_09_07` · **NO PAY.**
+- **factory_meter_mode:** `self_sufficient` — irreversible D artifacts [PR #1](https://github.com/heyitsmeyourbudlol-lgtm/ram/pull/1) **MERGED** + [PR #2](https://github.com/heyitsmeyourbudlol-lgtm/ram/pull/2); do **not** claim `external-proof-adapted` registry flip without separate meter pass
+- **Restore note:** Hub note path was missing while registry still cited `notes/INTEGRATION_PROOF_RAM.md`. This file restores the durable proof pointer (no Active `[output-research]` enqueue; no status flip).
+- **Falsifier:** if RAM path missing or status ≠ `adapt-verified-dgx` on next `external_proof` meter flip → re-run adapt + native verify (clear safety BLOCK) before promoting.

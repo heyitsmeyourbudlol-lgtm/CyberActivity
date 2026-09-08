@@ -1,0 +1,28 @@
+{
+  "ts": "2026-09-08T04:27:03Z",
+  "repo": "News",
+  "target": "/Users/togi/News",
+  "ok": true,
+  "artifact_mode": "pr",
+  "pr_url": "https://github.com/heyitsmeyourbudlol-lgtm/News/pull/1",
+  "extra_prs": [
+    "https://github.com/heyitsmeyourbudlol-lgtm/News/pull/2",
+    "https://github.com/heyitsmeyourbudlol-lgtm/News/pull/4"
+  ],
+  "merged": true,
+  "merge_commit": "614a0d7",
+  "branch": "peer/kit-a-to-z-20260908T042316",
+  "tip": "45a7bb4",
+  "worktree_path": "/Users/togi/News-kit-a-to-z-20260908T042316",
+  "receipt": "notes/KIT_A_TO_Z_FOURTEENTH_TARGET.md",
+  "next": 15,
+  "next_target": "HumanTyper|/Users/togi/HumanTyper or CyberActivity",
+  "needle": "OVERSEER_KIT_RUN_AE_2026_09_07",
+  "note": "Fourteenth News A\u2192E MERGED PR#1 e32f9c0 + PR#2 9e503a7 + PR#4 614a0d7 tip. WQ closed. NO PAY.",
+  "origin_main": "614a0d7",
+  "prs": [
+    "https://github.com/heyitsmeyourbudlol-lgtm/News/pull/1",
+    "https://github.com/heyitsmeyourbudlol-lgtm/News/pull/2",
+    "https://github.com/heyitsmeyourbudlol-lgtm/News/pull/4"
+  ]
+}
